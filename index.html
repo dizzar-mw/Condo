@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connie's Haven - A Promise of Forever</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="lock-screen">
+        <div class="lock-box">
+            <span class="lock-icon">🔒</span>
+            <h2>A Promise Locked by Love</h2>
+            <p>Please enter your special nickname to open.</p>
+            <input type="password" id="password-input" placeholder="Your Nickname...">
+            <button onclick="unlockWebsite()">Unlock</button>
+            <p id="lock-message"></p>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <header>
+            <h1 id="greeting"></h1>
+            <p>Welcome to our little world, my forever wife.</p>
+        </header>
+
+        <main>
+            
+            
+            <div class="quote-section love-quote">
+                <img src="img1.png">
+                <cite>- Kondoleezza Kalimbuka </cite>
+            </div>
+            
+            <div class="quote-section wisdom-quote">
+                <p class="quote-text">"Love is not just looking at each other, it's looking in the same direction."</p>
+                <cite>- Peace Phiri </cite>
+            </div>
+            
+            <div class="quote-section love-quote">
+                <img src="img2.png">
+                <cite>- To be honest connie i love you. </cite>
+            </div>
+
+            <div class="quote-section love-quote">
+                <p class="quote-text">"The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart."</p>
+                <cite>- Kondoleezza Kalimbuka </cite>
+            </div>
+            
+            <div class="quote-section wisdom-quote">
+                <img src="img.png" alt="condoleezza">
+                <cite>- Peace Phiri </cite>
+            </div>
+            
+            <div class="quote-section strength-quote">
+                <p class="quote-text">"Distance means so little when someone means so much. Our wait is a testament to the future we are building."</p>
+                <cite>- Your Love (Dizzar-mw)</cite>
+            </div>
+            
+            </main>
+        
+        <section class="surprise-section">
+            <h2 class="hover-text">Hover over me, my Queen, for a little bit of sky! <br/>
+                you know coz i think im lucky just to call y
+            </h2>
+            <div class="sky-blue-animation"></div>
+        </section>
+
+        <footer>
+            <h3>Send a Message to My Heart</h3>
+            <a href="mailto:dizzar-mw@outlook.com?subject=My%20Heart%20is%20Waiting%20Too%20(Connie)" class="email-button">
+                Send My Love Direct to Mail
+            </a>
+            <p>&copy; Built with love for Connie - Future Mrs. Mapira</p>
+        </footer>
+    </div>
+
+    <div id="pop-up">
+        <div class="pop-up-content">
+            <span class="close-button" onclick="closePopUp()">×</span>
+            <h3>A Fun Fact for My Clever Girl(Peace)</h3>
+            <p>Did you know? The longest recorded distance for a love letter sent by mail was **over 2,500 miles** in 1952. **Our love** is bridging an even greater distance than that Connie : the space between two souls destined for one life.</p>
+            <p>#filiru</p>
+            <p style="margin-top: 15px;">**P.S.** Planning for our future smart kids is the best part of my daily dreams.</p>
+            <p>where ever you are connie you have to understand that i wont let you down. I will wait for You.. plz wait for me.</p>
+            
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+/* Color Palette:
+    Black: #000000 (Primary Background)
+    White: #FFFFFF (Primary Text)
+    Grey: #CCCCCC (Secondary Text/Borders)
+    Sky Blue: #87CEEB (Accent/Animation)
+*/
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+img{
+    border-radius:10px;
+}
+
+/* --- Global Styles & Transitions --- */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #87CEEB; /* Sky Blue Headings */
+}
+
+.quote-section, .lock-box, .email-button {
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* --- Lock Screen Styling --- */
+#lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lock-box {
+    background: #1a1a1a; /* Dark Grey */
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #87CEEB; /* Sky Blue Border */
+    box-shadow: 0 0 30px rgba(135, 206, 235, 0.5); /* Sky Blue Glow */
+    max-width: 90%;
+}
+
+.lock-icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#password-input {
+    padding: 10px;
+    margin: 15px 0;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #CCCCCC;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#lock-screen button {
+    background: #87CEEB;
+    color: #000000;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* --- Main Content Styling --- */
+#main-content {
+    padding-top: 50px;
+    display: none; /* Initially hidden by JS */
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+/* Quote Cards & Backgrounds */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.quote-section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 1px 1px 3px #000;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border: 1px solid #222;
+}
+
+/* Specific Backgrounds (Cute Animals) */
+/* Images are just placeholders; you'll need to use actual URLs */
+.wisdom-quote {
+    background-image: url('https://placehold.co/800x200/222222/CCCCCC/svg?text=Cute+White+peace'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.love-quote {
+    background-image: url('https://placehold.co/800x200/444444/87CEEB/svg?text=Sky+Blue+Bird'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.strength-quote {
+    background-image: url('https://placehold.co/800x200/000000/FFFFFF/svg?text=Grey+Wolf'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.quote-text {
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #CCCCCC;
+}
+
+/* Animated Hover Effect for Quotes */
+.quote-section:hover {
+    transform: scale(1.02);
+    border-color: #87CEEB;
+    box-shadow: 0 0 30px #87CEEB;
+    cursor: pointer;
+}
+
+/* --- Sky Blue Hover Surprise Animation --- */
+.surprise-section {
+    margin: 60px 0;
+    padding: 40px 0;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+}
+
+.hover-text {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.sky-blue-animation {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* The actual "sky blue" element that will fly across */
+.sky-blue-animation::before {
+    content: '💙'; /* A heart or blue shape */
+    font-size: 3em;
+    color: #87CEEB;
+    position: absolute;
+    top: 50%;
+    left: -50px; /* Start off-screen */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: none; /* Reset transition */
+}
+
+/* Animation on Hover */
+.surprise-section:hover .sky-blue-animation::before {
+    animation: fly-across 2s forwards ease-out;
+    opacity: 1;
+}
+
+@keyframes fly-across {
+    0% { transform: translate(-100%, -50%) scale(0.5); opacity: 0; }
+    50% { transform: translate(150%, -50%) scale(1.2); opacity: 1; }
+    100% { transform: translate(300%, -50%) scale(0.5); opacity: 0; }
+}
+
+/* --- Footer and Email Button --- */
+footer {
+    padding: 30px 0;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.email-button {
+    display: inline-block;
+    background-color: #87CEEB; /* Sky Blue */
+    color: #000000;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.email-button:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px #87CEEB;
+    transform: translateY(-2px);
+}
+
+/* --- Pop-up Message Styling (The Ganger Fact) --- */
+#pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#pop-up.active {
+    display: flex;
+    opacity: 1;
+}
+
+.pop-up-content {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    border: 2px solid #87CEEB;
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.8);
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+#pop-up.active .pop-up-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #87CEEB;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+</style>
+
+
+<script>
+// --- 1. Website Unlock Function ---
+const CORRECT_PASSWORD = "connie"; 
+const lockScreen = document.getElementById('lock-screen');
+const mainContent = document.getElementById('main-content');
+const passwordInput = document.getElementById('password-input');
+const lockMessage = document.getElementById('lock-message');
+const popUp = document.getElementById('pop-up');
+
+function unlockWebsite() {
+    const enteredPassword = passwordInput.value.toLowerCase().trim();
+
+    if (enteredPassword === CORRECT_PASSWORD) {
+        // Animation to fade out lock screen
+        lockScreen.style.opacity = '0';
+        lockScreen.style.transition = 'opacity 1s ease';
+
+        // After the transition, remove the lock screen and show content
+        setTimeout(() => {
+            lockScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+            
+            // Run the greeting and pop-up immediately after unlock
+            updateGreeting(); 
+            openPopUp();
+
+            // Set main content for smooth fade-in
+            mainContent.style.opacity = '0';
+            mainContent.style.transition = 'opacity 1s ease';
+            setTimeout(() => {
+                mainContent.style.opacity = '1';
+            }, 50);
+
+        }, 1000); // Wait for 1 second fade out
+
+    } else {
+        lockMessage.textContent = "Oops! That's not the magic word. Try again!";
+        lockMessage.style.color = '#FF4444'; // Red error
+        
+        // Shake animation for incorrect password
+        passwordInput.classList.add('shake');
+        setTimeout(() => {
+            passwordInput.classList.remove('shake');
+        }, 500);
+    }
+}
+
+// Add CSS for the shake animation (This should ideally be in style.css, but including it for completeness)
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.shake {
+    animation: shake 0.5s;
+}
+`;
+document.head.appendChild(style);
+
+
+// --- 2. Time-Based Greeting Function ---
+function updateGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greetingText;
+
+    if (hours < 12) {
+        greetingText = "Good Morning, Connie! I woke up thinking of you.";
+    } else if (hours < 18) {
+        greetingText = "Good Afternoon, Connie! Hope your day is bright as my future with you.";
+    } else {
+        greetingText = "Good Evening, Connie! Sweet dreams of our wedding day.";
+    }
+
+    document.getElementById('greeting').textContent = greetingText;
+}
+
+
+// --- 3. Pop-up Message Functions ---
+function openPopUp() {
+    // Show pop-up after a slight delay (e.g., 2 seconds after unlock)
+    setTimeout(() => {
+        popUp.classList.add('active');
+    }, 2000);
+}
+
+function closePopUp() {
+    popUp.classList.remove('active');
+}
+
+// Optional: Close pop-up if user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == popUp) {
+        closePopUp();
+    }
+}
+
+</script>
